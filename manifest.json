@@ -1,10 +1,10 @@
 {
-	"id": "shieldmaiden-plugin",
+	"id": "shieldmaiden-integration",
 	"name": "Shieldmaiden",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Access shieldmaiden.app directly from the Obsidian sidebar.",
-	"author": "Lyric",
-	"authorUrl": "",
+	"description": "Access shieldmaiden.app directly from the sidebar.",
+	"author": "groscy",
+	"authorUrl": "https://github.com/groscy",
 	"isDesktopOnly": false
 }

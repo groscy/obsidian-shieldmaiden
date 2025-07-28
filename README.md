@@ -44,7 +44,3 @@ The Shieldmaiden view will open in the right sidebar, allowing you to use shield
 ## Support
 
 If you encounter any issues or have suggestions for improvements, please create an issue in this repository.
-
-## License
-
-MIT

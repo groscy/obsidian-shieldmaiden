@@ -1,0 +1,10 @@
+{
+	"id": "shieldmaiden-plugin",
+	"name": "Shieldmaiden",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Access shieldmaiden.app directly from the Obsidian sidebar.",
+	"author": "Lyric",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}

@@ -6,26 +6,22 @@ const VIEW_TYPE_SHIELDMAIDEN = "shieldmaiden-view";
 export default class ObsidianShieldMaiden extends Plugin {
 	async onload() {
 
-		// Register the custom view
 		this.registerView(
 			VIEW_TYPE_SHIELDMAIDEN,
 			(leaf) => new ShieldmaidenView(leaf)
 		);
 
-		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('shield', 'Open Shieldmaiden', (evt: MouseEvent) => {
-			// Called when the user clicks the icon.
 			this.activateView();
 		});
-		// Perform additional things with the ribbon
+
 		ribbonIconEl.addClass('shieldmaiden-ribbon-class');
 
 		this.addStatusBarItem().addClass('shieldmaiden-ribbon');
 
-		// This adds a command to open Shieldmaiden view
 		this.addCommand({
 			id: 'open-shieldmaiden-view',
-			name: 'Open Shieldmaiden',
+			name: 'Open in Sidebar',
 			callback: () => {
 				this.activateView();
 			}
@@ -44,18 +40,14 @@ export default class ObsidianShieldMaiden extends Plugin {
 		const leaves = workspace.getLeavesOfType(VIEW_TYPE_SHIELDMAIDEN);
 
 		if (leaves.length > 0) {
-			// A leaf with our view already exists, use that
 			leaf = leaves[0];
 		} else {
-			// Our view could not be found in the workspace, create a new leaf
-			// in the right sidebar for it
 			leaf = workspace.getRightLeaf(false);
 			if (leaf) {
 				await leaf.setViewState({type: VIEW_TYPE_SHIELDMAIDEN, active: true});
 			}
 		}
 
-		// "Reveal" the leaf in case it is in a collapsed sidebar
 		if (leaf) {
 			await workspace.revealLeaf(leaf);
 		}
